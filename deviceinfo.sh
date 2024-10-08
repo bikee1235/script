@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Read it from here"
-date "Current Time in IST
+date "Current Time in IST"
 TZ="Asia/Kolkata" date
 echo "----------------------Network Details---------------------------------"
 ifconfig | grep inet | grep -v inet6
