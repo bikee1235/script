@@ -22,6 +22,7 @@ do
   ps -aef | grep $deviceid
   echo "------------------------------------------------------------------------------"
 done
+echo "USB_TETHERING"
 grep -o '"USB_TETHERING": *[^,]*' /opt/build/private-rbox/settings.json | awk -F': ' '{print $2}'
 echo "------------------------------Profile Details-----------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
