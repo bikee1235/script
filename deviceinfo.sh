@@ -4,14 +4,7 @@ NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
 xcodebuild -version
 sw_vers 
-df -h
-if [ $# -eq 1 ]
-then
-CM=$1
-else
 CM=`idevice_id -l`
-fi
-
 ARRAY=($CM)
 for deviceid in "${ARRAY[@]}"
 do
@@ -20,10 +13,6 @@ do
 
   echo "--------------------Done-----------------------------------"
 done
-
-#!/bin/bash
-
-
 
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
