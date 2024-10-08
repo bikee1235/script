@@ -17,6 +17,7 @@ do
   echo -e ${RED} iOS Version : `ideviceinfo -u $deviceid -k ProductVersion` ${NC}
   echo -e ${RED} iOS SerialNumber : `ideviceinfo -u $deviceid -k SerialNumber` ${NC}
   echo -e ${RED} iOS ProductName : `ideviceinfo -u $deviceid -k ProductName` ${NC}
+   echo -e ${RED} ProductType: `ideviceinfo -u $deviceid -k ProductType` ${NC}
   echo -e ${RED} iOS HardwareModel : `ideviceinfo -u $deviceid -k HardwareModel` ${NC}
   echo -e ${RED} Password: `ideviceinfo -u $deviceid -k PasswordProtected` ${NC}
   ps -aef | grep $deviceid
