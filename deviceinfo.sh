@@ -21,3 +21,28 @@ do
   echo "--------------------Done-----------------------------------"
 done
 
+#!/bin/bash
+
+
+
+PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
+
+# Extract the plist from the provisioning profile
+security cms -D -i "$PROFILE" > profile.plist
+
+# Extract the entitlements
+echo "Extracting Entitlements..."
+/usr/libexec/PlistBuddy -c "Print Entitlements" profile.plist > entitlements.plist
+cat entitlements.plist
+
+# Extract the ProvisionedDevices
+echo "Extracting Provisioned Devices..."
+/usr/libexec/PlistBuddy -c "Print ProvisionedDevices" profile.plist
+
+# Extract the TeamName
+echo "Extracting Team Name..."
+/usr/libexec/PlistBuddy -c "Print TeamName" profile.plist
+
+# Clean up
+rm profile.plist
+rm entitlements.plist
