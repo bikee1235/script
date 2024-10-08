@@ -1,13 +1,18 @@
 #!/bin/bash
 echo "Read it from here"
+date "Current Time in IST
+TZ="Asia/Kolkata" date
 echo "----------------------Network Details---------------------------------"
 ifconfig | grep inet | grep -v inet6
 echo "----------------------OS and Xcode Details---------------------------------"
+echo " xcodebuild "xcodebuild -version
+echo "Mac OS" sw_vers 
+echo "CPU "sysctl -n machdep.cpu.brand_string
+echo "CPU Count "sysctl -n hw.logicalcpu
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
-xcodebuild -version
-sw_vers 
+
 echo "--------------------Connected Device Details-----------------------------------"
 CM=`idevice_id -l`
 ARRAY=($CM)
