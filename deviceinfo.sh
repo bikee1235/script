@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Read it from here"
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
