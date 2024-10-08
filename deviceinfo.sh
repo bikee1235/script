@@ -17,12 +17,13 @@ do
   echo -e ${RED} iOS Version : `ideviceinfo -u $deviceid -k ProductVersion` ${NC}
   echo -e ${RED} iOS SerialNumber : `ideviceinfo -u $deviceid -k SerialNumber` ${NC}
   echo -e ${RED} iOS ProductName : `ideviceinfo -u $deviceid -k ProductName` ${NC}
-    echo -e ${RED} iOS HardwareModel : `ideviceinfo -u $deviceid -k HardwareModel` ${NC}
+  echo -e ${RED} iOS HardwareModel : `ideviceinfo -u $deviceid -k HardwareModel` ${NC}
   echo -e ${RED} Password: `ideviceinfo -u $deviceid -k PasswordProtected` ${NC}
   ps -aef | grep $deviceid
-  echo "--------------------Done-----------------------------------"
+  echo "------------------------------------------------------------------------------"
 done
-echo "--------------------Profile Details-----------------------------------"
+grep -o '"USB_TETHERING": *[^,]*' /opt/build/private-rbox/settings.json | awk -F': ' '{print $2}'
+echo "------------------------------Profile Details-----------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
 # Extract the plist from the provisioning profile
