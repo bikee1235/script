@@ -23,7 +23,7 @@ do
   echo "------------------------------------------------------------------------------"
 done
 echo "USB_TETHERING"
-grep -o '"USB_TETHERING": *[^,]*' /opt/build/private-rbox/settings.json | awk -F': ' '{print $2}'
+jq '.USB_TETHERING' /opt/build/private-rbox/settings.json 
 echo "------------------------------Profile Details-----------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
