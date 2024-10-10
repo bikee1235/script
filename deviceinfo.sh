@@ -30,6 +30,7 @@ do
   echo -e ${RED} iOS HardwareModel : `ideviceinfo -u $deviceid -k HardwareModel` ${NC}
   echo -e ${RED} Password: `ideviceinfo -u $deviceid -k PasswordProtected` ${NC}
   ps -aef | grep $deviceid
+  ideviceinstaller -u $deviceid -l 
   echo "------------------------------------------------------------------------------"
 done
 echo "USB_TETHERING"
