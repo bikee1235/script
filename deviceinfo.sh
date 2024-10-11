@@ -2,6 +2,7 @@
 echo "Read it from here"
 date "Current Time in IST"
 TZ="Asia/Kolkata" date
+uptime
 echo "----------------------Network Details---------------------------------"
 ifconfig | grep inet | grep -v inet6
 echo "----------------------OS and Xcode Details---------------------------------"
@@ -33,8 +34,6 @@ do
   ideviceinstaller -u $deviceid -l 
   echo "------------------------------------------------------------------------------"
 done
-echo "USB_TETHERING"
-jq '.USB_TETHERING' /opt/build/private-rbox/settings.json 
 echo "------------------------------Profile Details-----------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
