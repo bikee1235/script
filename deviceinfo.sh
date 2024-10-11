@@ -18,6 +18,13 @@ sysctl -n hw.logicalcpu
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
+echo "--------------------installed commands -----------------------------------"
+
+tidevice
+ios
+idevicescreenshot -x 8030
+ideviceinstaller -l
+
 
 echo "--------------------Connected Device Details-----------------------------------"
 CM=`idevice_id -l`
