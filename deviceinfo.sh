@@ -1,8 +1,9 @@
 #!/bin/bash
 echo "Read it from here"
 date "Current Time in IST"
-TZ="Asia/Kolkata" date
+date
 uptime
+pm2 list
 echo "----------------------Network Details---------------------------------"
 ifconfig | grep inet | grep -v inet6
 echo "----------------------OS and Xcode Details---------------------------------"
