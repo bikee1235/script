@@ -20,12 +20,16 @@ NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
 echo "--------------------installed commands -----------------------------------"
 
-tidevice
-ios
+echo "--------------------List of devices connected fetched using tidevice -----------------------------------"
+tidevice list
+echo "--------------------go-ios version -----------------------------------"
+ios -v
+echo "--------------------Validating idevicescreenshot command -----------------------------------"
 idevicescreenshot -x 8030
+echo "--------------------Validating  ideviceinstaller command -----------------------------------"
 ideviceinstaller -l
-
-
+echo "--------------------Validating  iproxy  command -----------------------------------"
+/usr/local/bin/iproxy
 echo "--------------------Connected Device Details-----------------------------------"
 CM=`idevice_id -l`
 ARRAY=($CM)
