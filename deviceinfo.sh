@@ -4,9 +4,9 @@ date "Current Time in IST"
 date
 uptime
 pm2 list
-echo "----------------------Network Details---------------------------------"
+echo "---------------------------------------Network Details---------------------------------"
 ifconfig | grep inet | grep -v inet6
-echo "----------------------OS and Xcode Details---------------------------------"
+echo "-------------------------------------OS and Xcode Details--------------------------------"
 echo  "xcodebuild " 
 xcodebuild -version
 echo "Mac OS " 
@@ -18,12 +18,12 @@ sysctl -n hw.logicalcpu
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
-echo "--------------------installed commands -----------------------------------"
+echo "---------------------------------------------------installed commands ---------------------------------------------------------"
 
-echo "--------------------List of devices connected fetched using tidevice -----------------------------------"
+echo "-------------------------------------List of devices connected fetched using tidevice -------------------------------------------"
 tidevice list
 echo "--------------------go-ios version -----------------------------------"
-ios -v
+ios --version
 echo "--------------------Validating idevicescreenshot command -----------------------------------"
 idevicescreenshot -x 8030
 echo "--------------------Validating  ideviceinstaller command -----------------------------------"
