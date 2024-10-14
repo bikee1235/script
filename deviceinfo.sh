@@ -44,9 +44,9 @@ do
   echo -e ${RED} Password: `ideviceinfo -u $deviceid -k PasswordProtected` ${NC}
   ps -aef | grep $deviceid
   ideviceinstaller -u $deviceid -l 
-  echo "----------------------------------------------------------------------------------------"
+  echo "-----------------------------------------------------------------------------------------"
 done
-echo "--------------------------------------Profile Details-------------------------------------"
+ echo "--------------------------------------Profile Details-------------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
 # Extract the plist from the provisioning profile
