@@ -4,7 +4,7 @@ date "Current Time in IST"
 date
 uptime
 pm2 list
-echo "---------------------------------------Network Details---------------------------------"
+echo "---------------------------------------Network Details----------------------------------"
 ifconfig | grep inet | grep -v inet6
 echo "-------------------------------------OS and Xcode Details--------------------------------"
 echo  "xcodebuild " 
@@ -18,7 +18,7 @@ sysctl -n hw.logicalcpu
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 #For installing integrated service in all the devices at once
-echo "---------------------------------------------------installed commands ---------------------------------------------------------"
+echo "---------------------------------------------------installed commands ----------------------------------------------------------"
 
 echo "-------------------------------------List of devices connected fetched using tidevice -------------------------------------------"
 tidevice list
@@ -28,9 +28,9 @@ echo "--------------------Validating idevicescreenshot command -----------------
 idevicescreenshot -x 8030
 echo "--------------------Validating  ideviceinstaller command -----------------------------------"
 ideviceinstaller -l
-echo "--------------------Validating  iproxy  command -----------------------------------"
+echo "--------------------------Validating  iproxy  command --------------------------------------"
 /usr/local/bin/iproxy
-echo "--------------------Connected Device Details-----------------------------------"
+echo "----------------------------Connected Device Details----------------------------------------"
 CM=`idevice_id -l`
 ARRAY=($CM)
 for deviceid in "${ARRAY[@]}"
@@ -44,9 +44,9 @@ do
   echo -e ${RED} Password: `ideviceinfo -u $deviceid -k PasswordProtected` ${NC}
   ps -aef | grep $deviceid
   ideviceinstaller -u $deviceid -l 
-  echo "------------------------------------------------------------------------------"
+  echo "----------------------------------------------------------------------------------------"
 done
-echo "------------------------------Profile Details-----------------------------------"
+echo "--------------------------------------Profile Details-------------------------------------"
 PROFILE="/opt/build/WebDriverBuild13.4/Build/Products/Debug-iphoneos/WebDriverAgentRunner-Runner.app/embedded.mobileprovision"
 
 # Extract the plist from the provisioning profile
